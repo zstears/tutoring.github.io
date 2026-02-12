@@ -4109,3 +4109,29 @@ input, select, textarea {
 					}
 
 	}
+
+
+/* ZACHS CHANGES ADDED BELOW */ 
+.styled-list {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.styled-list li {
+  padding: 0.75rem 0 0.75rem 2.5rem;
+  position: relative;
+  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.styled-list li:before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #4A90E2;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
