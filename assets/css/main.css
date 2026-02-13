@@ -4131,7 +4131,7 @@ input, select, textarea {
   content: "✓";
   position: absolute;
   left: 0;
-  color: #4A90E2;
+  color: #FFFFFF;
   font-weight: bold;
   font-size: 1.3rem;
 }
