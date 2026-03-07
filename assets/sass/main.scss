@@ -5,7 +5,7 @@
 @import 'libs/breakpoints';
 @import 'libs/html-grid';
 @import url('fontawesome-all.min.css');
-@import url("https://fonts.googleapis.com/css?family=Roboto:100,300,100italic,300italic");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;300;400;500;600;700&display=swap");
 
 /*
 	Landed by HTML5 UP
@@ -17,8 +17,8 @@
 
 	@include breakpoints((
 		xlarge:   ( 1281px,  1680px ),
-		large:    ( 981px,   1280px ),
-		medium:   ( 737px,   980px  ),
+		large:    ( 990px,   1280px ),
+		medium:   ( 737px,   989px  ),
 		small:    ( 481px,   736px  ),
 		xsmall:   ( null,    480px  ),
 	));
@@ -161,8 +161,8 @@
 	}
 
 	strong, b {
-		color: _palette(fg-bold);
-		font-weight: _font(weight-bold);
+		color: #2c5aa0;
+		font-weight: 600;
 	}
 
 	em, i {
@@ -192,7 +192,9 @@
 	}
 
 	h3 {
+		color: #D4AF37;
 		font-size: 1.35em;
+		font-weight: 600;
 		line-height: 1.5em;
 	}
 
@@ -1480,6 +1482,7 @@
 			margin: 0;
 			position: absolute;
 			top: 0;
+			color: #f8f9fa;
 		}
 
 		nav {
@@ -1843,7 +1846,7 @@
 		display: none;
 	}
 
-	@include breakpoint('<=small') {
+	@include breakpoint('<=medium') {
 
 		$size-wrapper-pad-tb: 3.25em;
 		$size-wrapper-pad-lr: 1.5em;
