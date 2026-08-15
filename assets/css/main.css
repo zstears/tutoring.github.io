@@ -2954,7 +2954,8 @@ input, select, textarea {
 	.included-list {
 		list-style: none;
 		padding: 0;
-		margin: 2em 0;
+		margin: 2em auto;
+		max-width: 52em;
 	}
 
 	.included-item {
@@ -2967,6 +2968,7 @@ input, select, textarea {
 		margin-bottom: 1.25em;
 		transition: all 0.3s ease;
 		box-shadow: 0 2px 6px rgba(13, 31, 45, 0.04);
+		width: 100%;
 	}
 
 	.included-item:hover {
@@ -4565,6 +4567,38 @@ input, select, textarea {
   align-items: flex-start;
   gap: 1rem;
 }
+
+.about-intro-layout {
+	display: flex;
+	align-items: flex-start;
+	gap: 2.5em;
+	margin-bottom: 2em;
+}
+
+.about-intro-layout .about-intro-image {
+	flex: 0 0 24em;
+	max-width: 24em;
+}
+
+.about-intro-layout .about-intro-image .image {
+	margin-bottom: 0;
+}
+
+.about-intro-layout .headshot {
+	width: 100%;
+	height: auto;
+	border-radius: 0;
+	display: block;
+}
+
+.about-intro-layout .about-intro-text {
+	flex: 1 1 auto;
+}
+
+.about-intro-layout .about-intro-text p {
+	margin-bottom: 0;
+}
+
 .headshot {
 	width: 100px; /* adjust size */
   height: auto;
@@ -4577,6 +4611,18 @@ input, select, textarea {
 }
 
 @media screen and (max-width: 768px) {
+	.about-intro-layout {
+		flex-direction: column;
+		gap: 1.5em;
+	}
+
+	.about-intro-layout .about-intro-image {
+		flex: 1 1 auto;
+		max-width: 26em;
+		width: 100%;
+		margin: 0 auto;
+	}
+
 	.headshot-list {
 		flex-direction: column;
 		align-items: center;
@@ -4606,10 +4652,40 @@ input, select, textarea {
 	flex: 1 1 60%;
 }
 
+
+.experience-layout .about-intro-image {
+	flex: 0 0 30%;
+	max-width: 22em;
+}
+
+.experience-layout .about-intro-image .image {
+	margin-bottom: 0;
+}
+
+.experience-layout .about-intro-image img {
+	width: 100%;
+	height: auto;
+	display: block;
+	border-radius: 0;
+}
+
 .experience-layout .qualifications-card {
-	flex: 0 0 35%;
+	flex: 1 1 auto;
 	background: #ffffff;
 	box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.08);
+	margin-bottom: 0;
+}
+
+.experience-background {
+	max-width: none;
+	width: 100%;
+	margin: 1.25em 0 0 0;
+	background: #ffffff;
+	box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.08);
+}
+
+.experience-background ul {
+	margin-bottom: 0;
 }
 
 .experience-layout .qualifications-card h5 {
@@ -4625,6 +4701,18 @@ input, select, textarea {
 		flex-direction: column;
 		gap: 1.5em;
 		align-items: stretch;
+	}
+
+	.experience-layout .about-intro-image {
+		flex: 1 1 auto;
+		max-width: 26em;
+		margin: 0 auto;
+		width: 100%;
+	}
+
+	.experience-background {
+		max-width: none;
+		margin: 1em 0 0 0;
 	}
 
 	.experience-layout .qualifications-card {
@@ -4662,6 +4750,21 @@ input, select, textarea {
 
 .session-layout .session-text {
 	width: 100%;
+}
+
+.session-layout .session-text .offer-list {
+	list-style: none;
+	padding-left: 0;
+	margin: 0 0 2em 0;
+}
+
+.session-layout .session-text .offer-list li {
+	padding-left: 0;
+	margin-bottom: 1.2em;
+}
+
+.session-layout .session-text .offer-list li:last-child {
+	margin-bottom: 0;
 }
 
 @media screen and (max-width: 980px) {
@@ -4782,4 +4885,96 @@ hr.section-divider {
 	#five .button:hover {
 		background-color: #e8c547 !important;
 		color: #0f3460 !important;
+	}
+
+	/* Clean list formatting for stage/step lists */
+	.offer-list {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin: 1.5em 0 2em 0 !important;
+	}
+
+	.offer-list li {
+    list-style-type: none !important;
+    padding-left: 0 !important;
+    margin-bottom: 1.2em;
+    line-height: 1.65;
+    color: #4a5568;
+	}
+
+	.offer-list li b {
+    color: #0d1f2d;
+    display: inline;
+	}
+
+	.session-steps-list {
+    margin: 2em auto;
+    max-width: 48em;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+	}
+
+	.session-step-item {
+		border-left: 3px solid #2c5aa0;
+		padding-left: 1.25em;
+	}
+
+	.session-step-item h4 {
+		color: #0d1f2d;
+		font-size: 1.05em;
+		font-weight: 600;
+		margin-bottom: 0.3em;
+	}
+
+	.session-step-item p {
+		color: #4a5568;
+		font-size: 0.95em;
+		line-height: 1.6;
+		margin: 0;
+	}
+
+	/* Clean list formatting for Session stages & How to Get Started */
+	.session-text, .Get-started {
+		max-width: 50em;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.session-text li, 
+	.Get-started li {
+		list-style: none;
+		text-align: left;
+		margin-bottom: 1.4em;
+		line-height: 1.65;
+		color: #4a5568;
+		padding-left: 0;
+	}
+
+	.session-text li b, 
+	.Get-started li b {
+		display: block;
+		color: #0d1f2d;
+		font-size: 1.05em;
+		margin-bottom: 0.25em;
+	}
+
+	/* Unify card typography */
+	.examboard-card p {
+		font-family: "IBM Plex Sans", Helvetica, sans-serif !important;
+		font-size: 0.95em !important;
+		font-weight: 400 !important;
+		line-height: 1.65 !important;
+		color: #4a5568 !important;
+		margin-bottom: 0.75em !important;
+	}
+
+	.examboard-card p:last-child {
+		margin-bottom: 0 !important;
+	}
+
+	.examboard-card p b {
+		color: #0d1f2d !important;
+		font-weight: 600 !important;
 	}
